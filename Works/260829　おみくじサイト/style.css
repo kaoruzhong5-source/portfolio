@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 別ファイルにCSSを書き込む場合このファイルで日本語を指定するコードをつけ足す */
+
+main{
+  width: 240px;
+  margin: 32px auto;
+
+/* 余白を左右均等に割り振る→中央揃え */
+/* 32pxは更に上下に完全に空間を作る左右の中央揃えはできても上下は調整する必要あり */
+
+}
+
+section{
+  border: 4px double red;
+  /* 4pxの太さの二重線 */
+  text-align: center;
+  /* 中央揃え */
+  color: red;
+}
+
+h1{
+  margin: 0;
+  border-bottom: 2px solid red;
+  /* 2pxの太さの一本の下線 */
+  font-weight: normal;
+  padding: 8px 0;
+   /* 箱の内側の空白 */
+}
+
+p{
+  margin: 0;
+  font-weight: bold;
+  /* 太線 */
+  font-size: 36px;
+  padding: 24px 0;
+}
+
+button{
+  all:unset;
+  /* ボタンはデフォルトで最初固定されているからリセットする */
+  width: 100%;
+  /* 最初のメインで幅は決められてる＝横幅いっぱいの大きさ */
+  background: red;
+  border-radius: 8px;
+  /* ボタンの角を曲げる */
+  color: aliceblue;
+  text-align: center;
+  padding: 8px 0;
+  /* paddingは空間の幅が上下・左右の順で表されてる */
+  margin-top: 16px;
+  /* marginは箱の外側の空白。今回はボタンの上側の部分の空白 */
+  cursor: pointer;
+  /* カーソルを乗せた時→から☞のマークに変化するように */
+  box-shadow: 0 4px #7a0000;
+  /* x方向に0。y方向に4。影や移動系は座標で考えるので空間を考えるmargin・paddingと間違えないように */
+}
+
+button:hover{
+/* ボタンにカーソルを乗せた時に起こること */
+  opacity: .8;
+  /* 透明度を80％にする(1ならそのまま0は透明) */
+}
+
+button:active{
+/* ボタンをクリックしたときに起こる動き */
+  box-shadow: 0 1px #7a0000;
+  transform: translateY(3px);
+  /* 影が3px縮んだ分ボタンが下に移動する */
+}
